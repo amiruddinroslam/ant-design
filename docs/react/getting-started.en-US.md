@@ -37,7 +37,7 @@ If you have already set things up by following the [Install and Initialization](
 
 ```jsx
 import React, { useState } from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom';
 import { DatePicker, message } from 'antd';
 import 'antd/dist/reset.css';
 import './index.css';
@@ -58,7 +58,8 @@ const App = () => {
   );
 };
 
-render(<App />, document.getElementById('root'));
+const root = document.getElementById('root');
+root.render(<App />);
 ```
 
 ### 3. Explore more components
